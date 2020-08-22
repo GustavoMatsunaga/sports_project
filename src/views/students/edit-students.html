@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/styles/partials/students/students.css">
+{% endblock %}
+
+{% block main %}
+<div id="container">
+    <div class="card">
+        <div class="card-photo">
+            <img src="https://images.unsplash.com/photo-1499510318569-1a3d67dc3976?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80" alt="student Image">
+        </div>
+        <div class="card-info">
+            <form class="card-info" method="POST" action="/students?_method=PUT">
+                <h1>Edit Student</h1>
+                {% include "students/fields-students.html" %}
+    
+                <input type="hidden" 
+                        name="id" 
+                        value={{student.id}}>
+            </form>
+            <form class="card-info" method="POST" action="/students?_method=DELETE">
+    
+                <input type="hidden" 
+                name="id" 
+                value={{student.id}}>
+                <button class="delete-button" type="submit">Delete</button>
+            </form>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

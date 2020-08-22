@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/styles/partials/pages.css">
+{% endblock %}
+
+{% block main %}
+<div id="container">
+    <div class="card">
+        <div class="card-photo">
+            <img src="{{instructor.avatar_url}}" alt="Instructor Image">
+        </div>
+        <div class="card-info">
+            <h1>Info</h1>
+            <div class="item">
+                <div class="item-class">Instructor</div>
+                <div>{{instructor.name}}</div>
+            </div>
+            <div class="item">
+                <div class="item-class">Age</div>
+                <div>{{instructor.age}}</div>
+            </div>
+            <div class="item">
+                <div class="item-class">Gender</div>
+                <div>{{ "MASCULINO" if instructor.gender == "M" else "FEMININO" }}</div>
+            </div>
+            <div class="item">
+                <div class="item-class">Classes</div>
+                {% for classe in instructor.classes %}
+                <span>{{classe}}</span>
+                {% endfor %}
+            </div>
+            <div class="item">
+                <div class="item-class">Member since</div>
+                <div>{{instructor.created_at}}</div>
+            </div>
+            <a class="edit-button" href="/instructors/{{instructor.id}}/edit">Editar</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

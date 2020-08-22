@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/styles/partials/pages.css">
+{% endblock %}
+
+{% block main %}
+<div id="container">
+    <a class="create-new" href="/instructor/create">New Tutor</a>
+    <div class="card-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Instructor</th>
+                    <th>Classes</th>
+                    <th>Profile</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for instructor in instructors %}
+                <tr>
+                    <td><span><img src="{{instructor.avatar_url}}" alt="{{instructor.name}}"><p>{{instructor.name}}</p></span></td>
+                    <td>{{instructor.classes}}</td>
+                    <td><a href="/instructors/{{instructor.id}}">Details</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

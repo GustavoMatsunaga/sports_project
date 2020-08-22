@@ -1,0 +1,222 @@
+/********* INDEX HTML  *********/
+main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.card {
+    display: flex;
+    align-items: top;
+    justify-content: flex-start;
+    margin: 3rem auto;
+    border: 1px solid var(--color-secondary);
+    border-radius: 4rem;
+    box-shadow: 1rem 1rem 1rem 1rem var(--color-primary-darker);
+
+    animation: up 900ms ease-out;
+}
+
+/* ANIMATION */
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(10%)
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.card-table {
+    margin: 4rem auto;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    border: 1px solid var(--color-secondary);
+    border-radius: 4rem;
+    padding: 2rem;
+}
+
+.card-table tbody tr td span img {
+    width: 40%;
+    height: 40%;
+    border-radius: 1rem;
+    border: 1px solid var(--color-secondary);
+    margin-right: 2rem;
+}
+
+.card-table thead tr th{
+    border-bottom: 1px solid var(--color-secondary);
+    font-size: 2rem;
+    padding: 1rem 3rem;
+}
+
+.card-table tbody tr td {
+    border-bottom: 1px solid var(--color-primary-darker);
+    font-size: 1.4rem;
+    padding: 1rem 0;
+}
+
+tbody tr td span {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+tbody tr td span p {
+    flex: 1 1 auto;
+    align-self: center;
+}
+
+.card-table tbody tr td a {
+    text-decoration: none;
+    border: 1px solid var(--color-primary-darker);
+    padding: 1rem;
+    border-radius: 4rem;
+    background: var(--color-primary);
+    color: var(--color-secondary)
+}
+
+.card-table tbody tr td a:hover {
+    background: var(--color-primary-darker);
+    color: var(--color-primary);
+}
+
+/********* Create NEW REF *********/
+
+.create-new{
+    position: absolute;
+    right: 0;
+    top: 0.8rem;
+    text-decoration: none;
+    border: 1px solid var(--color-primary-darker);
+    padding: 0.5rem;
+    border-radius: 4rem;
+    background: var(--color-primary);
+    color: var(--color-secondary)
+}
+
+
+/********* CARDS CONFIGS *********/
+
+.card .card-photo {
+    width: 100%;
+}
+
+.card .card-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4rem 0 0 4rem;
+}
+
+.card .card-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    background: var(--color-primary);
+    border-radius: 0 4rem 4rem 0;
+}
+
+.card .card-info h1 {
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+.card .card-info .item {
+    font-size: 1.3rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card .card-info .item .item-class {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+    border: 1px solid var(--color-secondary);
+    border-radius: 4rem;
+    background: white;
+}
+
+.card .card-info .item span {
+    border: 1px solid var(--color-primary-darker);
+    background: var(--color-primary-darker);
+    padding: 0.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.card .card-info .item span + span {
+    margin-left: 1rem;
+}
+
+/********* CREATE FORM *********/
+.card-info input {
+    width: 100%;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 4rem;
+    padding-left: 1rem;
+    font-weight: bold;
+}
+
+.card-info input[type="placeholder"]{
+    font-weight: normal;
+}
+
+.card-info input[type="radio"] {
+    width: initial;
+    margin-right: 0.5rem;
+}
+
+.card-info .send-form, .edit-button, .delete-button {
+    width: 90%;
+    border: none;
+    border-radius: 4rem;
+    margin: 2rem auto;
+    background: var(--color-secondary);
+    color: var(--color-primary-darker);
+    padding: 2rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.5rem;
+    cursor: pointer;
+}
+
+.card-info .send-form:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+.edit-button { 
+    text-decoration: none;
+    letter-spacing: 0.3rem;
+}
+
+/********* MEDIA QUERIES *********/
+@media (max-width: 700px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 4rem;
+        animation: initial;
+    }
+
+    .card .card-photo {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .card .card-photo img {
+        border-radius: 4rem 4rem 0 0;
+    }
+
+    .card .card-info {
+        width: 100%;
+        border-radius: 0 0 4rem 4rem;
+    }
+}

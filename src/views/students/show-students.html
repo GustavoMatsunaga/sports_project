@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/styles/partials/pages.css">
+{% endblock %}
+
+{% block main %}
+<div id="container">
+    <div class="card">
+        <div class="card-photo">
+            <img src="{{student.avatar_url}}" alt="student Image">
+        </div>
+        <div class="card-info">
+            <h1>Info</h1>
+            <div class="item">
+                <div class="item-class">Student</div>
+                <div>{{student.name}}</div>
+            </div>
+            <div class="item">
+                <div class="item-class">Age</div>
+                <div>{{student.age}}</div>
+            </div>
+            <div class="item">
+                <div class="item-class">Gender</div>
+                <div>{{ "MASCULINO" if student.gender == "M" else "FEMININO" }}</div>
+            </div>
+            <div class="item">
+                <div class="item-class">Interested in :</div>
+                {% for classe in student.interested_in %}
+                <span>{{classe}}</span>
+                {% endfor %}
+            </div>
+            <div class="item">
+                <div class="item-class">Member since</div>
+                <div>{{student.created_at}}</div>
+            </div>
+            <a class="edit-button" href="/students/{{student.id}}/edit">Editar</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

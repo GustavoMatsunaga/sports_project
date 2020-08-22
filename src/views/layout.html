@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Sports</title>
+
+    <link rel="icon" href="/imgs/favicon/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/partials/header.css">
+    {% block styles %}
+    {% endblock %}
+    <link rel="stylesheet" href="/styles/partials/footer.css">
+</head>
+<body id="layout">
+    <header>
+        <a href="/instructors">Tutors</a>
+        <a href="/students">Students</a>
+    </header>
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
+    {% block scripts %}
+    {% endblock %}
+</body>
+</html>

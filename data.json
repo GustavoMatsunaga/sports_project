@@ -1,0 +1,51 @@
+{
+    "instructors": [
+        {
+            "id": 2,
+            "name": "Gustavo",
+            "avatar_url": "https://images.unsplash.com/photo-1545809074-59472b3f5ecc?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+            "birth": 721008000000,
+            "gender": "M",
+            "classes": "Tennis",
+            "created_at": 1597949900690
+        },
+        {
+            "id": 3,
+            "name": "Gustavo",
+            "avatar_url": "https://images.unsplash.com/photo-1554484361-e85dcd332855?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+            "birth": 721008000000,
+            "gender": "M",
+            "classes": "Tennis",
+            "created_at": 1597949902894
+        },
+        {
+            "id": 4,
+            "name": "José",
+            "avatar_url": "https://images.unsplash.com/photo-1545151414-8a948e1ea54f?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+            "birth": 721008000000,
+            "gender": "M",
+            "classes": "Yoga, Tennis",
+            "created_at": 1598033002437
+        },
+        {
+            "id": 5,
+            "name": "Maria",
+            "avatar_url": "https://images.unsplash.com/photo-1544298621-35a764866ff0?ixlib=rb-1.2.1&auto=format&fit=crop&w=650&q=80",
+            "birth": 721008000000,
+            "gender": "M",
+            "classes": "Yoga, Crossfit",
+            "created_at": 1598033355328
+        }
+    ],
+    "students": [
+        {
+            "id": "2",
+            "name": "Gustavo",
+            "avatar_url": "https://images.unsplash.com/photo-1545809074-59472b3f5ecc?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+            "birth": 720835200000,
+            "gender": "M",
+            "interested_in": "Tennis",
+            "created_at": 1597949900690
+        }
+    ]
+}

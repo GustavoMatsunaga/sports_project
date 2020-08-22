@@ -1,0 +1,69 @@
+<div class="item">
+    <div class="item-class">Tutor</div>
+    <div><input 
+            type="text"
+            name="name"
+            placeholder="Insert the name of the tutor"
+            required
+            value="{{instructor.name}}"
+        >
+    </div>
+</div>
+<div class="item">
+    <div class="item-class">Avatar</div>
+    <div><input 
+            type="url"
+            name="avatar_url"
+            placeholder="https://"
+            value="{{instructor.avatar_url}}"
+        >
+    </div>
+</div>
+<div class="item">
+    <div class="item-class">Birthday</div>
+    <div><input 
+        type="date"
+        name="birth"
+        value="{{instructor.birth}}"
+    ></div>
+</div>
+<div class="item">
+    <div class="item-class">Gender</div>
+    <div>
+        <span>
+            <input 
+                type="radio"
+                name="gender"
+                value="M"
+                {% if instructor.gender == "M" %}
+                    checked
+                {% endif %}
+                required
+            >Masculino
+        </span>
+        <span>
+            <input 
+                type="radio"
+                name="gender"
+                value="F"
+                {% if instructor.gender == "F"%}
+                    checked 
+                {% endif %}
+                required
+            >Feminino
+        </span>
+    </div>
+</div>
+<div class="item">
+    <div class="item-class">Given classes</div>
+    <div>
+        <input 
+            type="text"
+            name="classes"
+            placeholder="Insert the given classes using commas"
+            required
+            value="{{instructor.classes}}"
+        >
+    </div>
+</div>
+<button class="send-form" type="submit">Save</button>
