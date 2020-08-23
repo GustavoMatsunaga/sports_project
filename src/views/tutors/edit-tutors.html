@@ -19,7 +19,7 @@
                         name="id" 
                         value={{instructor.id}}>
             </form>
-            <form class="card-info" method="POST" action="/instructors?_method=DELETE">
+            <form id="form-delete" class="card-info" method="POST" action="/instructors?_method=DELETE">
     
                 <input type="hidden" 
                 name="id" 
@@ -27,6 +27,7 @@
                 <button class="delete-button" type="submit">Delete</button>
             </form>
         </div>
+        <script src="/scripts/formDelete.js"></script>
         
     </div>
 </div>

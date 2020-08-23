@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block styles %}
-<link rel="stylesheet" href="/styles/partials/students/students.css">
+<link rel="stylesheet" href="/styles/partials/pages.css">
 {% endblock %}
 
 {% block main %}
@@ -19,7 +19,7 @@
                         name="id" 
                         value={{student.id}}>
             </form>
-            <form class="card-info" method="POST" action="/students?_method=DELETE">
+            <form id="form-delete" class="card-info" method="POST" action="/students?_method=DELETE">
     
                 <input type="hidden" 
                 name="id" 
@@ -27,7 +27,7 @@
                 <button class="delete-button" type="submit">Delete</button>
             </form>
         </div>
-        
+        <script src="/scripts/formDelete.js"></script>
     </div>
 </div>
 {% endblock %}

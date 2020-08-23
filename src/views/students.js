@@ -128,5 +128,5 @@ exports.delete = function (req,res) {
 
 // create route
 exports.create = function (req,res) {
-    return res.redirect("/students")
+    return res.render("students/create-students.html")
 }
